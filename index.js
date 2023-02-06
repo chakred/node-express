@@ -6,9 +6,10 @@ const app = express();
 
 // IMPORTANT to see post body in json
 app.use(express.json());
+app.use('/', routes.router);
 
-routes.index(app);
+// routes.index(app);
 
-routes.posts(app);
+// routes.posts(app);
 
 app.listen(PORT, () => console.log(`Server starts to work with ${PORT}`));
